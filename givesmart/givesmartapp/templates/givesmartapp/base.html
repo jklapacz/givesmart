@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'givesmartapp/css/bootstrap-theme.min.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'givesmartapp/css/bootstrap.min.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'givesmartapp/css/custom.css' %}"/>
+<head>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<ul class="nav navbar-nav">
+				<li><a href="{%url 'givesmartapp:donate' %}">Donate</a></li>
+				<li><a href="{%url 'givesmartapp:search' %}">Search</a></li>
+				<li><a href="{%url 'givesmartapp:donation_submission' %}">Submit Donation</a></li>
+				<li><a href="{%url 'givesmartapp:compare' %}">compare</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+</head>
