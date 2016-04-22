@@ -1,4 +1,4 @@
-	{% load staticfiles%}
+{% load staticfiles%}
 {% include "givesmartapp/base.html" %}
 <body>
 <div class="container-fluid">
@@ -38,7 +38,7 @@ Search -> Compare -> Donate
 <div id="charitiesWrapper">
 
 <div id="charity1">
-<img href="AMF_Logo.jpeg"/>
+<img src="{% static "givesmartapp/AMF_Logo.jpg" %}" alt="AMF Logo"/>
 <h4> Against Malaria Foundation </h4>
 <h6> Summary </h6>
 <p>
@@ -55,7 +55,7 @@ Malaria killed 367-755 thousand people in 2013, most of them children, and there
 </div>
 
 <div id="charity2">
-<img href="SCI_Logo.jpeg"/>
+<img src="{% static "givesmartapp/SCI_Logo.jpg" %}" alt="SCI Logo"/>
 <h4> Schistomiasis Control Initiative</h4>
 <h6> Summary </h6>
 <p>
@@ -71,7 +71,7 @@ SCI can distribute deworming tablets for around $2 / person / year.
 </div>
 
 <div id="charity3">
-<img href="PHC_Logo.jpeg"/>
+<img src="{% static "givesmartapp/PHC_Logo.jpg" %}" alt="PHC Logo"/>
 <h4> Project Healthy Children </h4>
 <h6> Summary </h6>
 <p>
