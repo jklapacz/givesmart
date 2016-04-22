@@ -1,7 +1,94 @@
-{% load staticfiles%}
+	{% load staticfiles%}
 {% include "givesmartapp/base.html" %}
 <body>
 <div class="container-fluid">
-<p>This is a paragraph.</p>
+
+<div>
+<h1>
+Use GiveSmart with just 3 Simple Steps!
+</h1>
+<h3>
+Search -> Compare -> Donate
+</h3>
+</div>
+
+<div id="searchNBrowse">
+<form>
+    <input type="search" name="charitysearch">
+    <input type="submit" value="Search">
+</form>
+<h3> OR </h3>
+
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Browse By Category
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Global Poverty</a></li>
+    <li><a href="#">Healthcare</a></li>
+    <li><a href="#">Animals</a></li>
+	<li><a href="#">Local </a></li>
+  </ul>
+</div>
+
+</div>
+
+
+<h3>Or select one of our recommended charities:</h3>
+
+<div id="charitiesWrapper">
+
+<div id="charity1">
+<img href="AMF_Logo.jpeg"/>
+<h4> Against Malaria Foundation </h4>
+<h6> Summary </h6>
+<p>
+The Against Malaria Foundation protects people from malaria by distributing mosquito nets. 
+Insecticide-Treated Bednets are one of the most effective ways to prevent transmission of malaria and have averted about 450 million cases since 2000.
+The Against Malaria Foundation can distribute bednets for between $5-7.50.
+</p>
+<h6> Key Statistics </h6>
+<p>
+100% of public donations go directly to net purchases
+Malaria killed 367-755 thousand people in 2013, most of them children, and there are about 200 million cases every year
+
+</p>
+</div>
+
+<div id="charity2">
+<img href="SCI_Logo.jpeg"/>
+<h4> Schistomiasis Control Initiative</h4>
+<h6> Summary </h6>
+<p>
+Schistosomiasis Control Initiative provides technical assistance and funds for programmes that treat people for parasitic worms. 
+The WHO estimates that at least 261 million people required preventive treatment for schistosomiasis in 2013, but only 40 million were treated.
+The disease is widespread, but extremely cheap and easy to treat. 
+</p>
+<h6> Key Statistics </h6>
+<p>
+The recent Givewell report on SCI estimates that SCI has room for $3.8-8.3 million of additional funding over the next few years.
+SCI can distribute deworming tablets for around $2 / person / year.
+</p>
+</div>
+
+<div id="charity3">
+<img href="PHC_Logo.jpeg"/>
+<h4> Project Healthy Children </h4>
+<h6> Summary </h6>
+<p>
+Project Healthy Children works with governments in developing countries to fortify staple foods such as flour, sugar, rice and oil with vitamins and minerals. The body needs micronutrients like vitamins, iodine, and iron to function. 
+Micronutrient deficiencies can lead to various health problems and may lead to serious cognitive impairment.
+</p>
+<h6> Key Statistics </h6>
+<p>
+Millions of people are at risk of micronutrient deficiency worldwide
+By providing technical assistance to Governments in fortifying staple foods, Project Healthy Children helps
+ to avert malnutrition and micronutrient deficiency for around 5 cents / person / year
+
+</p>
+</div>
+
+</div>
+
+
 </div>
 </body>
