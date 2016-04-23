@@ -3,39 +3,37 @@
 <body>
 <div class="container-fluid">
     <div class="well">
-        <h1>
+        <div class="h4">
             Use GiveSmart with just 3 Simple Steps!
-        </h1>
-        <div class="h3">
-            <form class="hidden" id="search-form" action="{#url for searching#}"></form>
-            <div class="form-inline inline-block">
+        </div>
+        <form class="hidden" id="search-form" action="{#url for searching#}"></form>
+        <div class="form-inline inline-block">
                 <span class="input-group">
                     <input title="Search" class="form-control" type="search" form="search-form" name="search">
                     <span class="input-group-btn">
                         <input class="btn btn-default" type="submit" form="search-form" value="Search">
                     </span>
                 </span>
-            </div>
-            <span class="h3">Or</span>
-            <div class="dropdown inline-block">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Browse By Category
-                    <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li><a href="{# link to search results window for all charities of this category #}">Global
-                        Poverty</a></li>
-                    <li><a href="{# link to search results window for all charities of this category #}">Healthcare</a>
-                    </li>
-                    <li><a href="{# link to search results window for all charities of this category #}">Animals</a>
-                    </li>
-                    <li><a href="{# link to search results window for all charities of this category #}">Local </a></li>
-                </ul>
-            </div>
-            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Compare <span
-                class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Donate
         </div>
+        <span>Or</span>
+        <div class="dropdown inline-block">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Browse By Category
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="{# link to search results window for all charities of this category #}">Global
+                    Poverty</a></li>
+                <li><a href="{# link to search results window for all charities of this category #}">Healthcare</a>
+                </li>
+                <li><a href="{# link to search results window for all charities of this category #}">Animals</a>
+                </li>
+                <li><a href="{# link to search results window for all charities of this category #}">Local </a></li>
+            </ul>
+        </div>
+        <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Compare <span
+            class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Donate
     </div>
 
-    <h3>Or select one of our recommended charities:</h3>
+    <span class="h3">Or select one of our recommended charities:</span>
 
     <div>
 
