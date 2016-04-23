@@ -1,93 +1,117 @@
-{% load staticfiles%}
+{% load staticfiles %}
 {% include "givesmartapp/base.html" %}
 <body>
 <div class="container-fluid">
 
-<div>
-<h1>
-Use GiveSmart with just 3 Simple Steps!
-</h1>
-<h3>
-Search -> Compare -> Donate
-</h3>
-</div>
+    <div class="well">
+        <h1>
+            Use GiveSmart with just 3 Simple Steps!
+        </h1>
+        <div class="h3">
+            <form class="hidden" id="search-form" action="{#url for searching#}"></form>
+            <div class="form-inline inline-block">
+                <span class="input-group">
+                    <input title="Search" class="form-control" type="search" form="search-form" name="search">
+                    <span class="input-group-btn">
+                        <input class="btn btn-default" type="submit" form="search-form" value="Search">
+                    </span>
+                </span>
+            </div>
+            <span class="h3">Or</span>
+            <div class="dropdown inline-block">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Browse By Category
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Global Poverty</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Animals</a></li>
+                    <li><a href="#">Local </a></li>
+                </ul>
+            </div>
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Compare <span
+                class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Donate
+        </div>
+    </div>
 
-<div id="searchNBrowse">
-<form>
-    <input type="search" name="charitysearch">
-    <input type="submit" value="Search">
-</form>
-<h3> OR </h3>
+    <h3>Or select one of our recommended charities:</h3>
 
-<div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Browse By Category
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Global Poverty</a></li>
-    <li><a href="#">Healthcare</a></li>
-    <li><a href="#">Animals</a></li>
-	<li><a href="#">Local </a></li>
-  </ul>
-</div>
+    <div>
 
-</div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src="{% static "givesmartapp/AMF_Logo.jpg" %}" class="charity-logo" alt="AMF Logo"/>
+                <span class="h1"> Against Malaria Foundation </span>
+            </div>
+            <div class="panel-body">
+                <h4>Summary</h4>
+                <p>
+                    The Against Malaria Foundation protects people from malaria by distributing mosquito nets.
+                    Insecticide-Treated Bednets are one of the most effective ways to prevent transmission of malaria
+                    and have averted about 450 million cases since 2000.
+                    The Against Malaria Foundation can distribute bednets for between $5-7.50.
+                </p>
+                <h4>Key Statistics</h4>
+                <p>
+                    100% of public donations go directly to net purchases Malaria killed 367-755 thousand people in
+                    2013, most of them children, and there are about 200 million cases every year
+                </p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
 
+                <img src="{% static "givesmartapp/SCI_Logo.jpg" %}" class="charity-logo" alt="SCI Logo"/>
+                <span class="h1"> Schistomiasis Control Initiative</span>
+            </div>
+            <div class="panel-body">
 
-<h3>Or select one of our recommended charities:</h3>
+                <h6> Summary </h6>
+                <p>
+                    Schistosomiasis Control Initiative provides technical assistance and funds for programmes that treat
+                    people for parasitic worms.
+                    The WHO estimates that at least 261 million people required preventive treatment for schistosomiasis
+                    in
+                    2013, but only 40 million were treated.
+                    The disease is widespread, but extremely cheap and easy to treat.
+                </p>
+                <h4> Key Statistics </h4>
+                <p>
+                    The recent Givewell report on SCI estimates that SCI has room for $3.8-8.3 million of additional
+                    funding
+                    over the next few years.
+                    SCI can distribute deworming tablets for around $2 / person / year.
+                </p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src="{% static "givesmartapp/PHC_Logo.jpg" %}" class="charity-logo" alt="PHC Logo"/>
+                <span class="h1"> Project Healthy Children </span>
+            </div>
+            <div class="panel-body">
 
-<div id="charitiesWrapper">
+                <h4> Summary </h4>
+                <p>
+                    Project Healthy Children works with governments in developing countries to fortify staple foods such
+                    as
+                    flour, sugar, rice and oil with vitamins and minerals. The body needs micronutrients like vitamins,
+                    iodine, and iron to function.
+                    Micronutrient deficiencies can lead to various health problems and may lead to serious cognitive
+                    impairment.
+                </p>
+                <h4> Key Statistics </h4>
+                <p>
+                    Millions of people are at risk of micronutrient deficiency worldwide
+                    By providing technical assistance to Governments in fortifying staple foods, Project Healthy
+                    Children
+                    helps
+                    to avert malnutrition and micronutrient deficiency for around 5 cents / person / year
 
-<div id="charity1">
-<img src="{% static "givesmartapp/AMF_Logo.jpg" %}" alt="AMF Logo"/>
-<h4> Against Malaria Foundation </h4>
-<h6> Summary </h6>
-<p>
-The Against Malaria Foundation protects people from malaria by distributing mosquito nets. 
-Insecticide-Treated Bednets are one of the most effective ways to prevent transmission of malaria and have averted about 450 million cases since 2000.
-The Against Malaria Foundation can distribute bednets for between $5-7.50.
-</p>
-<h6> Key Statistics </h6>
-<p>
-100% of public donations go directly to net purchases
-Malaria killed 367-755 thousand people in 2013, most of them children, and there are about 200 million cases every year
+                </p>
+            </div>
+        </div>
 
-</p>
-</div>
-
-<div id="charity2">
-<img src="{% static "givesmartapp/SCI_Logo.jpg" %}" alt="SCI Logo"/>
-<h4> Schistomiasis Control Initiative</h4>
-<h6> Summary </h6>
-<p>
-Schistosomiasis Control Initiative provides technical assistance and funds for programmes that treat people for parasitic worms. 
-The WHO estimates that at least 261 million people required preventive treatment for schistosomiasis in 2013, but only 40 million were treated.
-The disease is widespread, but extremely cheap and easy to treat. 
-</p>
-<h6> Key Statistics </h6>
-<p>
-The recent Givewell report on SCI estimates that SCI has room for $3.8-8.3 million of additional funding over the next few years.
-SCI can distribute deworming tablets for around $2 / person / year.
-</p>
-</div>
-
-<div id="charity3">
-<img src="{% static "givesmartapp/PHC_Logo.jpg" %}" alt="PHC Logo"/>
-<h4> Project Healthy Children </h4>
-<h6> Summary </h6>
-<p>
-Project Healthy Children works with governments in developing countries to fortify staple foods such as flour, sugar, rice and oil with vitamins and minerals. The body needs micronutrients like vitamins, iodine, and iron to function. 
-Micronutrient deficiencies can lead to various health problems and may lead to serious cognitive impairment.
-</p>
-<h6> Key Statistics </h6>
-<p>
-Millions of people are at risk of micronutrient deficiency worldwide
-By providing technical assistance to Governments in fortifying staple foods, Project Healthy Children helps
- to avert malnutrition and micronutrient deficiency for around 5 cents / person / year
-
-</p>
-</div>
-
-</div>
+    </div>
 
 
 </div>
