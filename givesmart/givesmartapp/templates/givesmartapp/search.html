@@ -1,4 +1,11 @@
 {% include "givesmartapp/base.html" %}
 <body>
-<h3>Search</h3>
+<!-- <h3>{{charity.name}}</h3> -->
+<!-- <p>{{charity.summary}}</p> -->
+<!-- <p>{{charity.key_statistics}}</p> -->
+{% for charity in charities %}
+	<h3>{{charity.name}}</h3>
+	<p>{{charity.summary}}</p>
+	<p>{{charity.key_statistics}}</p>
+{% endfor %}
 </body>

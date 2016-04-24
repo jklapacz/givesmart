@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^search/', views.search, name='search'),
     url(r'^compare/', views.compare, name='compare'),
     url(r'^charity/(?P<name>[\w]+)/$', views.view_charity, name='viewcharity'),
+    # url(r'^donate/(?P<donate_name>[\1]+)/$', views.donate, name='donate'),
     url(r'^donate/', views.donate, name='donate'),
     url(r'^submit/', views.submit_donation, name='donation_submission'),
     url(r'^$', views.index, name='index'),
