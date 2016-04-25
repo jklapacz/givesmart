@@ -1,4 +1,14 @@
 {% include "givesmartapp/base.html" %}
 <body>
+{% include "givesmartapp/searching.html" %}
+<form id="submit-donation" action="/submit/" method="POST">
+Donate 
+<input title="Donation Charity" class="hidden" form="submit-donation" name="charity" value="{{charity.initials}}"/>
+{% csrf_token %}
+			$<input title="Donate" class="form-control" type="search" form="submit-donation" name="amount" value="{{amount}}"/>
+to {{charity.name}}
+			<input type="submit" value="Confirm" name="submission"/>
+	        <input type="submit" value="Cancel" name="submission"/>
+</form>
 <h3>Donate!</h3>
 </body>

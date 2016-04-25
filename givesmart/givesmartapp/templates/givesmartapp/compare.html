@@ -1,4 +1,16 @@
 {% include "givesmartapp/base.html" %}
+{% load staticfiles %}
 <body>
-<h1>Compare!</h1>
+{% include "givesmartapp/searching.html" %}
+	{% for charity in charities %}
+		<h2><a href="/charity/{{charity.initials}}">{{charity.name}}</a></h2>
+		{% with charity.image_url as image_url %}
+		<img src="{% static image_url %}" class="charity-logo"/>
+		<ul>
+			{% for stat in charity.stats %}
+			{{stat}}: {{charity.stats|get_item:stat}}
+			{% endfor %}
+		</ul>
+		{% endwith %}
+	{% endfor %}
 </body>

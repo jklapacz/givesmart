@@ -1,4 +1,32 @@
 {% include "givesmartapp/base.html" %}
+{% load staticfiles %}
+{% include "givesmartapp/searching.html" %}
 <body>
-<h2>{{charity}}</h2>
+	<div class="panel panel-default">
+	    <div class="panel-heading">
+	    {% with charity.image_url as image_url %}
+	        <img src="{% static image_url %}" class="charity-logo" alt="{{charity.initials}} Logo"/>
+	        <span class="h1">{{charity.name}} </span>
+	        <form id="donate-form" action="/donate/" method="POST">
+	        {% csrf_token %}
+	        <input title="Donation Charity" class="hidden" form="donate-form" name="charity" value="{{charity.initials}}"/>
+			$<input title="Donate" class="form-control" type="search" form="donate-form" name="amount">
+	        <input type="submit" value="Donate"/>
+	        </form>
+	    </div>
+	    {% endwith %}
+	    <div class="panel-body">
+	        <h4>Summary</h4>
+	        <p>
+	            {{charity.summary}}
+	        </p>
+	        <h4>Key Statistics</h4>
+	        <p>
+	            {{charity.key_statistics}}
+	        </p>
+	    </div>
+	</div>
+
+
 </body>
+
