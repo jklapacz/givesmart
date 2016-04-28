@@ -1,15 +1,18 @@
 {% load staticfiles %}
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Fjord+One' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="{% static 'givesmartapp/css/bootstrap-theme.min.css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'givesmartapp/css/bootstrap.min.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'givesmartapp/css/bootstrap.css' %}"/>
 <link rel="stylesheet" type="text/css" href="{% static 'givesmartapp/css/custom.css' %}"/>
 <script src="{% static 'givesmartapp/js/jquery-2.2.3.min.js' %}"></script>
 <script src="{% static 'givesmartapp/js/bootstrap.min.js' %}"></script>
 <head>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- <nav class="navbar navbar-default navbar-fixed-top"> -->
+    <nav class="navbar navbar-default navbar-static-top logo navbar-nav">
         <div class="container-fluid">
             <div class="navbar-header">
                 <ul class="nav navbar-nav">
-                    <li><a href="{% url 'givesmartapp:index' %}">GiveSmart</a></li>
+                    <li><a href="{% url 'givesmartapp:index' %}"><img class="charity-logo" src="{%static 'givesmartapp/logo.png'%}"/></a></li>
                 </ul>
             </div>
         </div>

@@ -3,16 +3,18 @@
 <body>
 <div class="container-fluid">
 {% include "givesmartapp/searching.html" %}
-
-    <span class="h3">Or select one of our recommended charities:</span>
-
+    <div class="recommendations">
+    <span class="recommendations">Our Recommendations</span>
+    </div>
     <div>
         {% for charity in charities %}
         {% with charity.image_url as image_url %}
         <div class="panel panel-default">
             <div class="panel-heading">
+                <div class="panel-logo">
                 <img src="{% static image_url %}" class="charity-logo" alt="{{charity.initials}} Logo"/>
-                <span class="h1"><a href="charity/{{charity.initials}}"> {{charity.name}}</a> </span>
+                </div>
+                <span class="h1 panel-head"><a href="charity/{{charity.initials}}"> {{charity.name}}</a> </span>
             </div>
             <div class="panel-body">
                 <h4>Summary</h4>
