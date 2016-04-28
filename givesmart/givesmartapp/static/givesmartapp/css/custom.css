@@ -1,5 +1,5 @@
 body {
-    padding-top: 70px;
+    font-family: 'Montserrat', serif;
 }
 
 .charity-logo {
@@ -15,66 +15,66 @@ body {
     display: inline-block;
 }
 
-.searching{
-	padding-left: 20%;
-	height: 130px;
-	/*display: inline-block;*/
+.searching {
+    padding-left: 20%;
+    height: 130px;
+    /*display: inline-block;*/
 }
 
-.donate{
-	font-family: 'Montserrat';
-	font-size: 30px;
-	color: #00672E;
+.donate {
+    font-size: 30px;
+    color: #00672E;
 }
 
-.compare{
-	font-family: 'Montserrat';
-	font-size: 30px;
-	color: #6B816B;
+.compare {
+    font-size: 30px;
+    color: #6B816B;
 }
 
 .btn-category,
 .btn-category:active {
-  color: #fff;
-  background-color: #00672E;
-  border-color: #6B816B;
+    color: #fff;
+    background-color: #00672E;
+    border-color: #6B816B;
 }
-.btn-category:hover{
-  color: #fff;
-  background-color: #6B816B;
-  border-color: #6B816B;
+
+.btn-category:hover {
+    color: #fff;
+    background-color: #6B816B;
+    border-color: #6B816B;
 }
 
 .search-form:active,
-.search-form:focus{
-	border-color:#B6F6BC ;
+.search-form:focus {
+    border-color: #B6F6BC;
 }
 
-.panel-logo{
-	display: inline-block;
-	width: 180px;
-}
-.panel-logo img{
-	vertical-align: middle;
-	width: 150px;
-	height: 80px;
-	padding-left:10px;
-}
-.panel-head, 
-.panel-head a{
-	font-family: 'Fjord One';
-	font-size: 30px;
-	color:#00672E;
+.panel-logo {
+    display: inline-block;
+    width: 180px;
 }
 
-.panel-head a:hover{
-	color:#6B816B;
+.panel-logo img {
+    vertical-align: middle;
+    width: 150px;
+    height: 80px;
+    padding-left: 10px;
 }
 
-.recommendations{
-	font-family: 'Montserrat';
-	font-size: 30px;
-	color: #6B816B;
-	margin-bottom: 10px;
+.panel-head,
+.panel-head a {
+    font-family: 'Fjord One', serif;
+    font-size: 30px;
+    color: #00672E;
+}
+
+.panel-head a:hover {
+    color: #6B816B;
+}
+
+.recommendations {
+    font-size: 30px;
+    color: #6B816B;
+    margin-bottom: 10px;
 
 }
