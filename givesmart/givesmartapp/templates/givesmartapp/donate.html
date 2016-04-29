@@ -2,15 +2,24 @@
 <body>
 <div class="container-fluid">
 {% include "givesmartapp/searching.html" %}
-<form id="submit-donation" action="/submit/" method="POST">
-Donate 
-<input title="Donation Charity" class="hidden" form="submit-donation" name="charity" value="{{charity.initials}}"/>
-{% csrf_token %}
-			$<input title="Donate" class="form-control" type="search" form="submit-donation" name="amount" value="{{amount}}"/>
-to {{charity.name}}
-			<input type="submit" value="Confirm" name="submission"/>
-	        <input type="submit" value="Cancel" name="submission"/>
+<div class="center-block pager">
+<h3>Place a donation towards: <span class="fjord donate">{{charity.name}}</span></h3>
+<form class="form-inline inline" id="donate-form" action="/submit/" method="POST">
+	{% csrf_token %}
+	<div class="input-group">
+	    <span class="input-group-addon">$</span>
+	    <input title="Donate" class="form-control search-form" type="search" form="donate-form" name="amount" value="{{amount}}">
+	    <div class="input-group-btn">
+	        <input type="submit" class="btn btn-default" value="Confirm" name="submission"/>
+	        <input type="submit" class="btn btn-default" value="Cancel"  name="submission"/>
+	    </div>
+	</div>
+	<input type="hidden" form="donate-form" name="charity"
+                       value="{{ charity.initials }}"/>
+
 </form>
-<h3>Donate!</h3>
+
+
+</div>
 </div>
 </body>

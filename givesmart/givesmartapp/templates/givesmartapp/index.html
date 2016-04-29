@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% include "givesmartapp/base.html" %}
+
 <body>
 
 <div class="container-fluid">
@@ -8,16 +9,27 @@
     <span class="recommendations">Our Recommendations</span>
     </div>
     <div>
+        
         {% for charity in charities %}
+
         {% with charity.image_url as image_url %}
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="panel-logo">
-                <img src="{% static image_url %}" class="charity-logo" alt="{{charity.initials}} Logo"/>
+        <div class="panel panel-default fjord">
+            <div class="panel-heading" id="{{charity|get_id}}">
+                <div class="row">
+                    <div class="col-lg-2">
+                    <div class="panel-logo">
+                    <img src="{% static image_url %}" class="charity-logo" alt="{{charity.initials}} Logo"/>
+                    </div>
+                    </div>
+                    <div class="col-lg-7">
+                    <span class="h1 panel-head"><a href="charity/{{charity.initials}}"> {{charity.name}}</a> </span>
+                    </div>
+                    <div class="col-lg-4 stars" id="rateYo{{forloop.counter}}"></div>
+                    <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"></div>
                 </div>
-                <span class="h1 panel-head"><a href="charity/{{charity.initials}}"> {{charity.name}}</a> </span>
             </div>
-            <div class="panel-body">
+            
+            <div class="panel-body initial-hide" id="{{charity|get_id}}">
                 <h4>Summary</h4>
                 <p>
                     {{charity.summary}}
@@ -39,8 +51,44 @@
 
 </div>
 <script>$(".panel-heading").on("click", function(){
+    var panel = $(this).attr('id');
+    
+    
+    $('#' + panel +'.panel-body').toggle(100, function(){});
+    // $(".panel-body").toggle("fast", function(){});
+});
+$( document ).ready(function () {
+ 
+    for(i = 1; i < 4; i++){
+        $("#rateYo" + i).rateYo({
+            rating: 3.6
+        }); 
+    }
 
-    $(".panel-body").toggle("fast", function(){});
+});
+$("[id*='rateYo']" ).click(function(e){
+    e.stopPropagation();
+    return true;
+
+});
+$("a" ).click(function(e){
+    e.stopPropagation();
+    return true;
+
+});
+
+$(".my-like").click(function(e){
+    e.stopPropagation();
+    if ($(this).hasClass("my-like")){
+        $(this).removeClass("my-like").addClass("my-liked");    
+    }
+    else{
+        $(this).removeClass("my-liked").addClass("my-like");       
+    }
+
+    
+    return true;
 });
 </script>
+
 </body>

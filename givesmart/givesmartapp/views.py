@@ -8,6 +8,10 @@ import re
 from django.template.defaulttags import register
 
 @register.filter
+def get_id(charity):
+	return charity.initials
+
+@register.filter
 def get_item(dictionary, key):
     return dictionary.get(key)
 
@@ -135,6 +139,8 @@ def submit_donation(request):
 		'charity': None,
 		'amount': request.POST['amount']
 	}
+	if context['amount'] == '':
+		context['amount'] = 0
 	for c in data.charities:
 		if c.initials == request.POST['charity']:
 			context['charity'] = c

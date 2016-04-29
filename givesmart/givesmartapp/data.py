@@ -20,7 +20,8 @@ AMF = Charity(name="Against Malaria Foundation", summary="\
 	stats={
 		'admin': 5,
 		'impact': .95,
-	})
+	},
+	ratings=[4.1, 4.2, 4.0, 2.5, 3.0, 4.8, 4.9, 5.0, 4.3])
 
 categories['HEALTHCARE'].append(AMF)
 categories['GLOBAL POVERTY'].append(AMF)

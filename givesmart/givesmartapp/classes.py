@@ -6,7 +6,8 @@ class Charity():
 	image_url = ""
 	categories = list()
 	stats = {}
-	def __init__(self, name="", initials="", summary="", key_statistics="", categories=list(), image_url="", stats={}):
+	ratings = []
+	def __init__(self, name="", initials="", summary="", key_statistics="", categories=list(), image_url="", stats={}, ratings=[]):
 		self.name = name
 		self.initials = initials
 		self.summary = summary
@@ -14,4 +15,5 @@ class Charity():
 		self.categories = categories
 		self.image_url = image_url
 		self.stats = stats
+		self.ratings = ratings
 

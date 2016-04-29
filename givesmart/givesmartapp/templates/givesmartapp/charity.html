@@ -3,11 +3,58 @@
 <body>
 <div class="container-fluid">
 {% include "givesmartapp/searching.html" %}
-<div class="panel panel-default">
-    <div class="panel-heading">
-        {% with charity.image_url as image_url %}
-            <img src="{% static image_url %}" class="charity-logo" alt="{{ charity.initials }} Logo"/>
-            <span class="h1">{{ charity.name }} </span>
+{% with charity.image_url as image_url %}
+<div class="panel panel-default fjord">
+    <div class="panel-heading" id="{{charity.initials}}">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="panel-logo">
+                   <img src="{% static image_url %}" class="charity-logo" alt="{{ charity.initials }} Logo"/> 
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <span class="h1 panel-head">{{ charity.name }} </span>
+            </div>
+
+            <div class="col-lg-4 stars" id="rateYo"></div>
+
+            <div class="my-like" title="Like"></div>
+            <form class="form-inline inline pull-right" id="donate-form" action="/donate/" method="POST">
+                {% csrf_token %}
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input title="Donate" class="form-control search-form" type="search" form="donate-form" name="amount">
+                    <div class="input-group-btn">
+                        <input type="submit" class="btn btn-default" value="Donate"/>
+                    </div>
+                </div>
+                <input type="hidden" form="donate-form" name="charity"
+                       value="{{ charity.initials }}"/>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <h4>Summary</h4>
+        <p>
+            {{ charity.summary }}
+        </p>
+        <h4>Key Statistics</h4>
+        <p>
+            {{ charity.key_statistics }}
+        </p>
+        <h4>Additional Statistics</h4>
+        <ul>
+            {% for stat in charity.stats %}
+                <li>{{ stat }}: {{ charity.stats|get_item:stat }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+        
+            
+    <!--         <span class="h1">{{ charity.name }} </span>
             <form class="form-inline inline pull-right" id="donate-form" action="/donate/" method="POST">
                 {% csrf_token %}
                 <div class="input-group">
@@ -20,10 +67,10 @@
                 <input type="hidden" form="donate-form" name="charity"
                        value="{{ charity.initials }}"/>
 
-            </form>
-            </div>
-        {% endwith %}
-    <div class="panel-body">
+            </form> -->
+            <!-- </div> -->
+        
+    <!-- <div class="panel-body">
         <h4>Summary</h4>
         <p>
             {{ charity.summary }}
@@ -32,9 +79,34 @@
         <p>
             {{ charity.key_statistics }}
         </p>
-    </div>
+    </div> -->
 </div>
+    {% endwith %}
 </div>
+
+<script>
+$( document ).ready(function () {
+ 
+    
+        $("#rateYo").rateYo({
+            rating: 4.4
+        }); 
+    
+
+});
+$(".my-like").click(function(e){
+    e.stopPropagation();
+    if ($(this).hasClass("my-like")){
+        $(this).removeClass("my-like").addClass("my-liked");    
+    }
+    else{
+        $(this).removeClass("my-liked").addClass("my-like");       
+    }
+
+    
+    return true;
+});
+</script>
 
 </body>
 

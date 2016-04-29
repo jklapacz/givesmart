@@ -1,7 +1,14 @@
 {% include "givesmartapp/base.html" %}
+{% load staticfiles %}
 <body>
 <div class="container-fluid">
 {% include "givesmartapp/searching.html" %}
-<h2>Submit</h2>
+	<div class="center-block pager">
+		<h1>Thank you for your generosity!</h3>
+		<h3>Your donation of <span class="amount">${{amount}}</span> means a lot to us!</h3>
+		<span class="h3 panel-head submit">-<a href="/charity/{{ charity.initials }}"> {{ charity.name }}</a> </span>
+		
+	</div>
+
 </div>
 </body>
