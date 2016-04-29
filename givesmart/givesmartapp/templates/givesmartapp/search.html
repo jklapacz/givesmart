@@ -3,6 +3,8 @@
 {% include "givesmartapp/base.html" %}
 
 <body>
+
+<div class="container-fluid">
 {% include "givesmartapp/searching.html" %}
 <form action="/compare/" method="POST">
     {% csrf_token %}
@@ -35,5 +37,7 @@
     {% endfor %}
     <input class="btn btn-default" style="margin-left:5px" type="submit" value="Compare"/>
     <!-- <button class="btn btn-primary" value="Compare"/>Compare charities</button> -->
+
 </form>
+</div>
 </body>

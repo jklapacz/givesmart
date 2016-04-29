@@ -1,6 +1,7 @@
 {% load staticfiles %}
 {% include "givesmartapp/base.html" %}
 <body>
+
 <div class="container-fluid">
 {% include "givesmartapp/searching.html" %}
     <div class="recommendations">
@@ -37,4 +38,9 @@
 
 
 </div>
+<script>$(".panel-heading").on("click", function(){
+
+    $(".panel-body").toggle("fast", function(){});
+});
+</script>
 </body>

@@ -1,5 +1,6 @@
 {% include "givesmartapp/base.html" %}
 <body>
+<div class="container-fluid">
 {% include "givesmartapp/searching.html" %}
 <form id="submit-donation" action="/submit/" method="POST">
 Donate 
@@ -11,4 +12,5 @@ to {{charity.name}}
 	        <input type="submit" value="Cancel" name="submission"/>
 </form>
 <h3>Donate!</h3>
+</div>
 </body>

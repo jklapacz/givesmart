@@ -1,7 +1,9 @@
 {% include "givesmartapp/base.html" %}
 {% load staticfiles %}
 <body>
+<div class="container-fluid">
 {% include "givesmartapp/searching.html" %}
+
 {% for charity in charities %}
     <h2><a href="/charity/{{ charity.initials }}">{{ charity.name }}</a></h2>
     {% with charity.image_url as image_url %}
@@ -13,4 +15,7 @@
         </ul>
     {% endwith %}
 {% endfor %}
+
+</div>
+
 </body>
