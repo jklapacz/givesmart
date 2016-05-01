@@ -55,6 +55,74 @@ PHC = Charity(name="Project Healthy Children",
 categories['HEALTHCARE'].append(PHC)
 categories['GLOBAL POVERTY'].append(PHC)
 
+DWI = Charity(name="Deworm the Worm Initiative",
+	summary="Deworm the World Initiative provides technical assistance and funds for programmes that treat people for parasitic worms. Intestinal worms like hookworm, roundworm, and whipworm are Neglected Tropical Diseases, which don't currently get the attention they deserve",
+	key_statistics="875 million children require annual treatment. Deworm The World can help deworm children for around 50 cents / person / year",
+	categories=['HEALTHCARE', 'GLOBAL POVERTY'],
+	image_url="givesmartapp/Deworm-The-World-Initiative-Logo.png",
+	initials="DWI",
+	stats={
+		'admin': 7,
+		'impact': 85,
+	})
+
+categories['HEALTHCARE'].append(DWI)
+categories['GLOBAL POVERTY'].append(DWI)
+
+FAU = Charity(name="Faunalytics",
+	summary="Faunalytics works to connect animal advocates with information. This mostly involves creating independent research, working directly with client organizations on various research projects, and providing resources for individual advocates through the content library they host on their website.",
+	key_statistics="An estimated 2.8 animals are spared per dollar spent on Faunalytics’ independent studies and 1.3 animals are spared per dollar spent on their pro bono consulting",
+	categories=['ANIMALS'],
+	image_url="givesmartapp/faunalytics-centered-logo.png",
+	initials="FAU",
+	stats={
+		'admin': 30,
+		'impact': 54,
+	})
+categories['ANIMALS'].append(FAU)
+
+AEI = Charity(name="Animal Equality International",
+	summary="Animal Equality advocates for animals by conducting undercover investigations and promoting them through media outlets. They also conduct grassroots outreach, including demonstrations, protests, leafleting, and video showings. Related to their undercover investigations, they also conduct some legal and corporate outreach efforts.",
+	key_statistics="According to Animal Charity Evaluators, there is a $300K Funding Gap in 2016. A $1 Donation is estimated to spare 13.2 animals life in industrial agriculture",
+	categories=['ANIMALS'],
+	image_url="givesmartapp/aei_logo.png",
+	initials="FAU",
+	stats={
+		'admin': 10,
+		'impact': 74,
+	})
+categories['ANIMALS'].append(AEI)
+
+MFA = Charity(name="Mercy For Animals",
+	summary="Mercy For Animals (MFA) advocates for farmed animals by conducting undercover investigations, engaging in corporate and legal outreach, running online vegetarian ads, and organizing grassroots outreach events.",
+	key_statistics="MFA has an estimated $300K funding gap in 2016. A $1 donation is estimated to spare 14 animals from lives in factory farms.",
+	categories=['ANIMALS'],
+	image_url="givesmartapp/mfa_logo.png",
+	initials="MFA",
+	stats={
+		'admin': 9,
+		'impact': 77,
+	})
+categories['ANIMALS'].append(MFA)
+
+THL = Charity(name="The Humane League",
+	summary="The Humane League (THL) works to reduce suffering of farmed animals through conducting online advertising, organizing grassroots outreach, instigating cage-free and Meatless Monday campaigns, giving presentations, and engaging in corporate outreach",
+	key_statistics="The Humane League has an estimated $190K funding gap for the year 2016. A $1 donation is estimated to spare 13.4 animals from factory farms.",
+	categories=['ANIMALS'],
+	image_url="givesmartapp/thl_logo.png",
+	initials="THL",
+	stats={
+		'admin': 10,
+		'impact': 75,
+	})
+categories['ANIMALS'].append(THL)
+
+
 charities.append(AMF)
 charities.append(SCI)
 charities.append(PHC)
+charities.append(DWI)
+charities.append(FAU)
+charities.append(AEI)
+charities.append(MFA)
+charities.append(THL)
