@@ -71,7 +71,7 @@ categories['GLOBAL POVERTY'].append(DWI)
 
 FAU = Charity(name="Faunalytics",
 	summary="Faunalytics works to connect animal advocates with information. This mostly involves creating independent research, working directly with client organizations on various research projects, and providing resources for individual advocates through the content library they host on their website.",
-	key_statistics="An estimated 2.8 animals are spared per dollar spent on Faunalytics’ independent studies and 1.3 animals are spared per dollar spent on their pro bono consulting",
+	key_statistics="An estimated 2.8 animals are spared per dollar spent on Faunalytics' independent studies and 1.3 animals are spared per dollar spent on their pro bono consulting",
 	categories=['ANIMALS'],
 	image_url="givesmartapp/faunalytics-centered-logo.png",
 	initials="FAU",
