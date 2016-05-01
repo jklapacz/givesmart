@@ -3,8 +3,7 @@ from classes import *
 charities = list()
 categories = {'HEALTHCARE':list(),
 	'GLOBAL POVERTY':list(),
-	'ANIMALS':list(),
-	'LOCAL':list(),}
+	'ANIMALS':list(),}
 
 AMF = Charity(name="Against Malaria Foundation", summary="\
 	The Against Malaria Foundation protects people from malaria\
@@ -14,7 +13,7 @@ AMF = Charity(name="Against Malaria Foundation", summary="\
 	    The Against Malaria Foundation can distribute bednets for between $5-7.50.",
 	key_statistics="100% of public donations go directly to net purchases Malaria \
 	killed 367-755 thousand people in 2013, most of them children, and there are about 200 million cases every year", 
-	categories = ['HEALTHCARE', 'GLOBAL POVERTY', 'ANIMALS'],
+	categories = ['HEALTHCARE', 'GLOBAL POVERTY'],
 	image_url="givesmartapp/AMF_Logo.jpg",
 	initials = "AMF",
 	stats={
