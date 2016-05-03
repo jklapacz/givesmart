@@ -20,7 +20,8 @@ AMF = Charity(name="Against Malaria Foundation", summary="\
 		'admin': 5,
 		'impact': .95,
 	},
-	ratings=[4.1, 4.2, 4.0, 2.5, 3.0, 4.8, 4.9, 5.0, 4.3])
+	ratings=[4.1, 4.2, 4.0, 2.5, 3.0, 4.8, 4.9, 5.0, 4.3],
+	url="https://www.againstmalaria.com/")
 
 categories['HEALTHCARE'].append(AMF)
 categories['GLOBAL POVERTY'].append(AMF)
@@ -35,7 +36,8 @@ SCI = Charity(name="Schistomiasis Control Initiative",
 	stats={
 		'admin': 12,
 		'impact': .8,
-	})
+	},
+	url="https://www.imperial.ac.uk/schistosomiasis-control-initiative")
 
 categories['HEALTHCARE'].append(SCI)
 categories['GLOBAL POVERTY'].append(SCI)
@@ -49,7 +51,8 @@ PHC = Charity(name="Project Healthy Children",
 	stats={
 		'admin': 19,
 		'impact': 70,
-	})
+	},
+	url="http://projecthealthychildren.org/")
 
 categories['HEALTHCARE'].append(PHC)
 categories['GLOBAL POVERTY'].append(PHC)

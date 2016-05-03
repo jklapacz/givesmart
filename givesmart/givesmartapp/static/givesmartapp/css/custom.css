@@ -80,6 +80,12 @@ body {
     color: #00672E;
 }
 
+.charity-url a{
+	color: #6B816B;
+}
+.charity-url a:hover{
+	color: #C0D7C7;
+}
 .initial-hide{
 	display: None;
 }
