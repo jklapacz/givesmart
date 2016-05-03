@@ -23,6 +23,16 @@ def checkIfSearch(request):
 	else:
 		return False
 
+def account(request):
+	context = {
+		'charities':list(),
+		'amounts':list(),
+	}
+	for c in data.account1.liked:
+		context['charities'].append(c[0])
+		context['amounts'].append(c[1])
+	return render(request, "givesmartapp/account.html", context)
+
 def searchByTerm(request):
 	context = {
 		'charities':list()
@@ -55,7 +65,7 @@ def index(request):
 	if result != False:
 		return result	
 	else:
-		for c in data.charities:
+		for c in data.recommended:
 			context['charities'].append(c)	
 		return render(request, "givesmartapp/index.html", context)
 	

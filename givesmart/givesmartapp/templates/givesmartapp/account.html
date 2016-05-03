@@ -6,7 +6,7 @@
 <div class="container-fluid">
 {% include "givesmartapp/searching.html" %}
     <div class="recommendations">
-    <span class="recommendations">Our Recommendations</span>
+    <span class="recommendations">Your Charities</span>
     </div>
     <div>
         
@@ -22,22 +22,23 @@
                     </div>
                     </div>
                     <div class="col-lg-7">
-                    <span class="h1 panel-head"><a href="charity/{{charity.initials}}"> {{charity.name}}</a> </span>
+                    <span class="h1 panel-head"><a href="/charity/{{charity.initials}}"> {{charity.name}}</a> </span>
                     </div>
                     <div class="col-lg-4 stars" id="rateYo{{forloop.counter}}"></div>
-                    <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"></div>
-                </div>
-            </div>
+                    <div class="my-liked" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"></div>
+                
             
-            <div class="panel-body initial-hide" id="{{charity|get_id}}">
-                <h4>Summary</h4>
-                <p>
-                    {{charity.summary}}
-                </p>
-                <h4>Key Statistics</h4>
-                <p>
-                    {{charity.key_statistics}}
-                </p>
+            <!-- <form class="form-inline inline pull-right" id="donate-form" action="/donate/" method="POST"> -->
+                <div class="input-group pull-right account-donated">Total donated: $110</div>
+                <!-- <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input title="Donate" class="form-control search-form" type="search" form="donate-form" name="amount">
+                    
+                </div> -->
+    
+
+            <!-- </form> -->
+            </div>
             </div>
         </div>
         {% endwith %}
@@ -83,6 +84,19 @@ $(".my-like").click(function(e){
     }
     else{
         $(this).removeClass("my-liked").addClass("my-like");       
+    }
+
+    
+    return true;
+});
+
+$(".my-liked").click(function(e){
+    e.stopPropagation();
+    if ($(this).hasClass("my-liked")){
+        $(this).removeClass("my-liked").addClass("my-like");    
+    }
+    else{
+        $(this).removeClass("my-like").addClass("my-liked");       
     }
 
     

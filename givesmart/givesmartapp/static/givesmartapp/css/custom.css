@@ -6,6 +6,24 @@ body {
 	font-family: 'Fjord One', serif;
 }
 
+.view-account{
+    margin-top: -50px;
+
+}
+
+.view-account a{
+    color: #6B816B;
+}
+
+.view-account a:hover{
+    color: #C0D7C7;
+}
+
+.account-donated{
+    margin-right:90px;
+    margin-top: 10px;
+}
+
 .charity-logo {
     max-height: 100px;
     margin-right: 5px;
@@ -80,6 +98,13 @@ body {
     color: #00672E;
 }
 
+.panel-head-compare,
+.panel-head-compare a {
+    font-family: 'Fjord One', serif;
+    font-size: 20px;
+    color: #00672E;
+}
+
 .charity-url a{
 	color: #6B816B;
 }
@@ -105,6 +130,10 @@ body {
 	margin-left: 60px;
 }
 
+.compare-stars{
+    margin-left: 0px;   
+    margin-top: 10px;
+}
 .chck{
 	height: 50px;
 	width: 50px;
@@ -144,6 +173,17 @@ body {
 #donate-form{
 	padding-top: 10px;
 	padding-right: 10px;
+}
+
+.list-inline{
+    white-space: nowrap;
+}
+
+.document-list{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+
 }
 
 

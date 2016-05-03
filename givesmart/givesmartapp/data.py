@@ -1,9 +1,11 @@
 from classes import *
 
 charities = list()
+recommended = list()
 categories = {'HEALTHCARE':list(),
 	'GLOBAL POVERTY':list(),
-	'ANIMALS':list(),}
+	'ANIMALS':list(),
+	'LOCAL':list(),}
 
 AMF = Charity(name="Against Malaria Foundation", summary="\
 	The Against Malaria Foundation protects people from malaria\
@@ -21,7 +23,8 @@ AMF = Charity(name="Against Malaria Foundation", summary="\
 		'impact': .95,
 	},
 	ratings=[4.1, 4.2, 4.0, 2.5, 3.0, 4.8, 4.9, 5.0, 4.3],
-	url="https://www.againstmalaria.com/")
+	url="https://www.againstmalaria.com/",
+	chart_url="https://docs.google.com/spreadsheets/d/1XUGHdO4_1cD-yrYKxxnVvbThGQVhPdjpNxACY9leLZE/pubchart?oid=139599977&amp;format=interactive")
 
 categories['HEALTHCARE'].append(AMF)
 categories['GLOBAL POVERTY'].append(AMF)
@@ -37,7 +40,8 @@ SCI = Charity(name="Schistomiasis Control Initiative",
 		'admin': 12,
 		'impact': .8,
 	},
-	url="https://www.imperial.ac.uk/schistosomiasis-control-initiative")
+	url="https://www.imperial.ac.uk/schistosomiasis-control-initiative",
+	chart_url="https://docs.google.com/spreadsheets/d/1XUGHdO4_1cD-yrYKxxnVvbThGQVhPdjpNxACY9leLZE/pubchart?oid=213707420&amp;format=interactive")
 
 categories['HEALTHCARE'].append(SCI)
 categories['GLOBAL POVERTY'].append(SCI)
@@ -52,7 +56,8 @@ PHC = Charity(name="Project Healthy Children",
 		'admin': 19,
 		'impact': 70,
 	},
-	url="http://projecthealthychildren.org/")
+	url="http://projecthealthychildren.org/",
+	chart_url="https://docs.google.com/spreadsheets/d/1XUGHdO4_1cD-yrYKxxnVvbThGQVhPdjpNxACY9leLZE/pubchart?oid=139599977&amp;format=interactive")
 
 categories['HEALTHCARE'].append(PHC)
 categories['GLOBAL POVERTY'].append(PHC)
@@ -66,7 +71,8 @@ DWI = Charity(name="Deworm the Worm Initiative",
 	stats={
 		'admin': 7,
 		'impact': 85,
-	})
+	},
+	chart_url="https://docs.google.com/spreadsheets/d/1XUGHdO4_1cD-yrYKxxnVvbThGQVhPdjpNxACY9leLZE/pubchart?oid=213707420&amp;format=interactive")
 
 categories['HEALTHCARE'].append(DWI)
 categories['GLOBAL POVERTY'].append(DWI)
@@ -80,7 +86,8 @@ FAU = Charity(name="Faunalytics",
 	stats={
 		'admin': 30,
 		'impact': 54,
-	})
+	},
+	chart_url="https://docs.google.com/spreadsheets/d/1XUGHdO4_1cD-yrYKxxnVvbThGQVhPdjpNxACY9leLZE/pubchart?oid=213707420&amp;format=interactive")
 categories['ANIMALS'].append(FAU)
 
 AEI = Charity(name="Animal Equality International",
@@ -88,11 +95,12 @@ AEI = Charity(name="Animal Equality International",
 	key_statistics="According to Animal Charity Evaluators, there is a $300K Funding Gap in 2016. A $1 Donation is estimated to spare 13.2 animals life in industrial agriculture",
 	categories=['ANIMALS'],
 	image_url="givesmartapp/aei_logo.png",
-	initials="FAU",
+	initials="AEI",
 	stats={
 		'admin': 10,
 		'impact': 74,
-	})
+	},
+	chart_url="https://docs.google.com/spreadsheets/d/1XUGHdO4_1cD-yrYKxxnVvbThGQVhPdjpNxACY9leLZE/pubchart?oid=139599977&amp;format=interactive")
 categories['ANIMALS'].append(AEI)
 
 MFA = Charity(name="Mercy For Animals",
@@ -104,7 +112,8 @@ MFA = Charity(name="Mercy For Animals",
 	stats={
 		'admin': 9,
 		'impact': 77,
-	})
+	},
+	chart_url="https://docs.google.com/spreadsheets/d/1XUGHdO4_1cD-yrYKxxnVvbThGQVhPdjpNxACY9leLZE/pubchart?oid=139599977&amp;format=interactive")
 categories['ANIMALS'].append(MFA)
 
 THL = Charity(name="The Humane League",
@@ -116,9 +125,13 @@ THL = Charity(name="The Humane League",
 	stats={
 		'admin': 10,
 		'impact': 75,
-	})
+	},
+	chart_url="https://docs.google.com/spreadsheets/d/1XUGHdO4_1cD-yrYKxxnVvbThGQVhPdjpNxACY9leLZE/pubchart?oid=213707420&amp;format=interactive")
 categories['ANIMALS'].append(THL)
 
+recommended.append(AMF)
+recommended.append(SCI)
+recommended.append(PHC)
 
 charities.append(AMF)
 charities.append(SCI)
@@ -128,3 +141,13 @@ charities.append(FAU)
 charities.append(AEI)
 charities.append(MFA)
 charities.append(THL)
+
+account1 = Account("John Doe", liked = [(AMF, 40), (DWI, 200), (THL,0)])
+
+
+
+
+
+
+
+

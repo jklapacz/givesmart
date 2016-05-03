@@ -14,4 +14,5 @@ urlpatterns = [
     url(r'^donate/', views.donate, name='donate'),
     url(r'^submit/', views.submit_donation, name='donation_submission'),
     url(r'^$', views.index, name='index'),
+    url(r'^account/', views.account, name='account'),
 ]
