@@ -4,6 +4,7 @@ body {
 
 .fjord{
 	font-family: 'Fjord One', serif;
+    cursor:pointer;
 }
 
 .view-account{
